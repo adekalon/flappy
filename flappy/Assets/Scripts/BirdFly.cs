@@ -17,7 +17,7 @@ public class BirdFly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             //Fly Up
             rb.velocity = Vector2.up * velocity;

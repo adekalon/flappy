@@ -22,6 +22,8 @@ public class BirdFly : MonoBehaviour
             //Fly Up
             rb.velocity = Vector2.up * velocity;
         }
+
+        transform.eulerAngles = new Vector3(0, 0, rb.velocity.y * 10);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
